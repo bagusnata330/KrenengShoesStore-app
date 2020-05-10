@@ -29,7 +29,7 @@ class MainContent extends React.Component {
       {
         id: 3,
         name: "Jordan 6 Retro DMP",
-        price: 224,
+        price: 251,
         picture:
           "https://stockx.imgix.net/Air-Jordan-6-Retro-DMP-2020-Product.jpg",
       },
