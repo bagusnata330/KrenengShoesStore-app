@@ -64,7 +64,7 @@ class MainContent extends React.Component {
       {
         id: 8,
         name: "Jordan 1 Retro High Pine green",
-        price: 198,
+        price: 197,
         picture:
           "https://stockx.imgix.net/Air-Jordan-1-Retro-High-Pine-Green-Black-Product.jpg",
       },
