@@ -1,3 +1,47 @@
+
+
+.market-header {
+  text-align: center;
+  margin-bottom: 130px;
+}
+.card {
+  display: inline-block !important; 
+  width: min-content !important;
+  margin-left: 30px !important; 
+  margin-bottom: 30px !important;
+}
+.img {
+    width: 243px;
+    height: 175px;
+}
+.shoes-card {
+  display: inline-block;
+}
+
+.button {
+  color: green;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .App {
   text-align: center;
 }
