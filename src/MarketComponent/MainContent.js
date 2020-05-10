@@ -37,8 +37,7 @@ class MainContent extends React.Component {
         id: 4,
         name: "Jordan 1 Mid Camo (2020)",
         price: 203,
-        picture: 
-        "https://stockx.imgix.net/Air-Jordan-1-Mid-Camo-2020.png",
+        picture: "https://stockx.imgix.net/Air-Jordan-1-Mid-Camo-2020.png",
       },
       {
         id: 5,
@@ -95,6 +94,13 @@ class MainContent extends React.Component {
         price: 390,
         picture:
           "https://stockx.imgix.net/Adidas-Yeezy-Wave-Runner-700-Solid-Grey-Product.jpg",
+      },
+      {
+        id: 13,
+        name: "Jordan 13 Retro White Soar Green Pink (GS)",
+        price: 200,
+        picture:
+          "https://stockx.imgix.net/Air-Jordan-13-Retro-White-Soar-Green-Pink-GS.png",
       },
     ];
 
