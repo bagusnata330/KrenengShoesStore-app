@@ -149,6 +149,7 @@ class MainContent extends React.Component {
         <ul>{this.getCartList()}</ul>
         <hr/>
         <strong>Total: ${this.getTotalPrice()}</strong>
+        <hr/>
       </div>
     );
   }
