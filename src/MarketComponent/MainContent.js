@@ -6,7 +6,7 @@ class MainContent extends React.Component {
     this.state = {
       shoes: [],
       cart: [],
-      total: 0
+      total: 0,
     };
     this.addToCart = this.addToCart.bind(this);
   }
@@ -116,15 +116,19 @@ class MainContent extends React.Component {
 
     const isiKeranjang = this.state.cart;
     isiKeranjang.push(shoe);
-    this.setState({ cart: isiKeranjang })
+    this.setState({ cart: isiKeranjang });
 
-    console.log('isi keranjang sekarang adalah ', this.state.cart);
+    console.log("isi keranjang sekarang adalah ", this.state.cart);
   }
 
   getCartList() {
     const cartData = this.state.cart;
     const cartCard = cartData.map((shoe, index) => {
-    return <li>{index+1}. {shoe.name} ${shoe.price} </li>
+      return (
+        <li>
+          {index + 1}. {shoe.name} ${shoe.price}{" "}
+        </li>
+      );
     });
     return cartCard;
   }
@@ -135,9 +139,9 @@ class MainContent extends React.Component {
     // for(let i = 0; i < cartData.length; i++) {
     //   total = total + cartData[i].price;
     // }
-    cartData.forEach(shoe => {
+    cartData.forEach((shoe) => {
       total = total + shoe.price;
-    })
+    });
     return total;
   }
 
@@ -145,11 +149,17 @@ class MainContent extends React.Component {
     return (
       <div>
         <div>{this.state.shoes}</div>
-        <h3 style={{marginTop: '3rem'}}>Cart</h3>
-        <ul>{this.getCartList()}</ul>
-        <hr/>
-        <strong>Total: ${this.getTotalPrice()}</strong>
-        <hr/>
+        <div className="totalStyle"
+          style={{ display: "block", background: "whitesmoke", color: "black" }}
+        >
+          <h3 style={{ marginTop: "3rem", paddingLeft: "10px" }}>Cart :</h3>
+          <ul>{this.getCartList()}</ul> <hr />
+          <strong style={{ paddingLeft: "10px" }}>
+            Total: ${this.getTotalPrice()}
+          </strong>
+          <hr />
+        </div>
+        <br />
       </div>
     );
   }
@@ -157,7 +167,7 @@ class MainContent extends React.Component {
 
 function ShoeCard(props) {
   const clickBuyBtn = () => {
-    props.addToCart(props.shoe)
+    props.addToCart(props.shoe);
   };
 
   return (
@@ -173,8 +183,5 @@ function ShoeCard(props) {
     </div>
   );
 }
-
-
-
 
 export default MainContent;

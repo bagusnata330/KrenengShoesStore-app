@@ -7,9 +7,9 @@ import Footer from "./MarketComponent/Footer"
 function App() {
   return (
     <div className="container">
-        <Header />
-        <MainContent />
-        <Footer />
+      <Header />
+      <Footer />
+      <MainContent />
     </div>
   );
 }
