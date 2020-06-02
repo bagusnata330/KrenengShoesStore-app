@@ -3,24 +3,23 @@ import React, { useState } from "react";
 import { produce } from "immer";
 import { generate } from "shortid";
 
-function Header() {
+function Headerr() {
   return (
     <div>
-      <header className="market-headerr">
+      <header className="market-header flaming">
         <br />
-        <h1 >Kreneng Shoe Store</h1>
+        <h1 className="flaming">Kreneng Shoe Store</h1>
         <h3>All the shoes come straight from China</h3>
       </header>
 
-      <div className="row Normal-mode-align">
+      <div className="row dark-mode-align">
         <div>
           <h5
             style={{
-              marginLeft: "3px",
-              marginRight: "3px",
-              marginTop: "3px",
-              marginBottom: "6px",
-              fontSize:"20px"
+              marginLeft: "2px",
+              marginRight: "5px",
+              marginTop: "2px",
+              marginBottom: "2px",
             }}
           >
             Dark Mode
@@ -33,9 +32,9 @@ function Header() {
             name="toggleSwitch"
             id="toggleSwitch"
           />
-          <label className="toggle-switch-labell" htmlFor="toggleSwitch">
+          <label className="toggle-switch-label" htmlFor="toggleSwitch">
             <span className="toggle-switch-inner" />
-            <span className="toggle-switch-switchh" />
+            <span className="toggle-switch-switch" />
           </label>
         </div>
       </div>
@@ -43,7 +42,7 @@ function Header() {
   );
 }
 
-const Footer = () => {
+const Footerr = () => {
   const [shoe, setShoe] = useState([
     {
       id: "",
@@ -74,7 +73,7 @@ const Footer = () => {
 
   return (
     <div className="container addshoess">
-      <div className="styleflexx">
+      <div className="styleflex">
         <button
           className="btnn"
           onClick={() => {
@@ -162,7 +161,7 @@ const Footer = () => {
   );
 };
 
-class MainContent extends React.Component {
+class DarkMode extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -309,28 +308,22 @@ class MainContent extends React.Component {
 
   render() {
     return (
-      <div style={{background:"white"}}>
-        <div className=" container Normal-background">
-          <Header />
-          <Footer />
-          <div>{this.state.shoes}</div>
-          <div
-            className="totalStylee"
-            style={{
-              display: "block",
-              background: "whitesmoke",
-              color: "black",
-            }}
-          >
-            <h3 style={{ marginTop: "3rem", paddingLeft: "10px" }}>Cart :</h3>
-            <ul>{this.getCartList()}</ul> <hr />
-            <strong style={{ paddingLeft: "10px" }}>
-              Total: ${this.getTotalPrice()}
-            </strong>
-            <hr />
-          </div>
-          <br />
+      <div className=" container DarkMode-Background">
+        <Headerr />
+        <Footerr />
+        <div>{this.state.shoes}</div>
+        <div
+          className="totalStyle"
+          style={{ display: "block", background: "whitesmoke", color: "black" }}
+        >
+          <h3 style={{ marginTop: "3rem", paddingLeft: "10px" }}>Cart :</h3>
+          <ul>{this.getCartList()}</ul> <hr />
+          <strong style={{ paddingLeft: "10px" }}>
+            Total: ${this.getTotalPrice()}
+          </strong>
+          <hr />
         </div>
+        <br />
       </div>
     );
   }
@@ -342,7 +335,7 @@ function ShoeCard(props) {
   };
 
   return (
-    <div className="card shoes-cardd">
+    <div className="card shoes-card">
       <img className="img" src={props.shoe.picture} />
       <div className="card-body" alt="">
         <p className="card-text">{props.shoe.name}</p>
@@ -355,4 +348,4 @@ function ShoeCard(props) {
   );
 }
 
-export default MainContent;
+export default DarkMode;
