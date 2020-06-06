@@ -2,7 +2,7 @@
 .market-headerr {
   color: black;
   text-align: center;
-  margin-top: 1px;
+  margin-top: 4rem;
   margin-bottom: 100px;
 }
 
@@ -39,41 +39,19 @@
     color: white !important;
 }
 
-.toggle-switch-labell {
-  display: block;
-  overflow: hidden;
-  cursor: pointer;
-  border: 0 solid #ccc;
-  border-radius: 20px;
-  margin: 0;
-  max-width: 51px !important;
-  max-height: 20px !important;
-  margin-top: 3px;
-}
-.toggle-switch-switchh {
-  display: block;
-  width: 18px;
-  height: 16px;
-  margin-top: 5px;
-  margin-right: 4px;
-  background: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 27px;
-  border: 0 solid #ccc;
-  border-radius: 20px;
-  transition: all 0.3s ease-in 0s;
+/* ============================================================================================================================================== */
+
+/* ABOUT  */
+.market-headerrr {
+  color: black;
+  text-align: center;
+  margin-top: 4.5rem;
+  margin-bottom: 4rem;
 }
 
 
 
-
-
-
-
-
-
+/* ======================================================================================================================================== */
 
 
 
@@ -85,13 +63,16 @@ background: -webkit-linear-gradient(top, #000000 0%, #010122 84%, #090232 100%);
 background: linear-gradient(to bottom, #000000 0%, #010122 84%, #090232 100%);
 }
 
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* ==> Header CSS <== */
 .market-header {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-bottom: 100px;
 }
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* ==> Card List CSS <== */
 .card {
@@ -109,6 +90,8 @@ background: linear-gradient(to bottom, #000000 0%, #010122 84%, #090232 100%);
   box-shadow: #fff 0 -1px 1px, #ff0 0 -2px 12px, #ff8000 0 0px 0px,
     red 0 -9px 21px, 5px 12px 1px 1px rgba(0, 0, 0, 0.23);
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
 
 /* ==> Button CSS <== */
 .button {
@@ -139,6 +122,8 @@ background: linear-gradient(to bottom, #000000 0%, #010122 84%, #090232 100%);
   border-radius: 10px !important;
 }
 
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
 /* ==> Add New Shoes CSS <== */
 .addshoess {
   display: flex;
@@ -154,6 +139,8 @@ background: linear-gradient(to bottom, #000000 0%, #010122 84%, #090232 100%);
     red 0 -15px 35px, 1px 4px 1px 1px rgba(0, 0, 0, 0.23);
 }
 
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
 /* ==> Total CSS <== */
 .totalStyle {
   display: "block";
@@ -162,6 +149,8 @@ background: linear-gradient(to bottom, #000000 0%, #010122 84%, #090232 100%);
   box-shadow: #fff 0 -1px 1px, #ff0 0 -2px 12px, #ff8000 0 0px 0px,
     red 0 -9px 21px, 5px 12px 1px 1px rgba(0, 0, 0, 0.23);
 }
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
 /* ==> Toggle Switch CSS <== */
 .toggle-align {
@@ -267,3 +256,5 @@ background: linear-gradient(to bottom, #000000 0%, #010122 84%, #090232 100%);
   content: attr(data-no);
   /* other styles */
 }
+
+

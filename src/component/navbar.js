@@ -5,8 +5,14 @@ export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a className="navbar-brand" href="#">
-          Muvesuna
+        <a className="navbar-brand">
+          <Link
+            to="/"
+            className="nav-link"
+            style={{ color: "rgba(255, 255, 255, 0.5)" }}
+          >
+            Muvesuna
+          </Link>
         </a>
         <button
           className="navbar-toggler"
@@ -23,12 +29,12 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <Link to="/Home" className="nav-link">
-                Home
+              <Link to="/About" className="nav-link">
+                About
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Home/Dark_Mode" className="nav-link">
+              <Link to="/Dark_Mode" className="nav-link">
                 Dark Mode
               </Link>
             </li>

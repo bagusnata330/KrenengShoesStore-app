@@ -1,166 +1,9 @@
-// import React from "react";
 import React, { useState } from "react";
 import { produce } from "immer";
 import { generate } from "shortid";
+import Header from "./Header"
+import AddNewShoes from "./AddNewShoes"
 
-function Header() {
-  return (
-    <div>
-      <header className="market-headerr">
-        <br />
-        <h1 >Kreneng Shoe Store</h1>
-        <h3>All the shoes come straight from China</h3>
-      </header>
-
-      <div className="row Normal-mode-align">
-        <div>
-          <h5
-            style={{
-              marginLeft: "3px",
-              marginRight: "3px",
-              marginTop: "3px",
-              marginBottom: "6px",
-              fontSize:"20px"
-            }}
-          >
-            Dark Mode
-          </h5>
-        </div>
-        <div className="toggle-switch toggle-align">
-          <input
-            type="checkbox"
-            className="toggle-switch-checkbox"
-            name="toggleSwitch"
-            id="toggleSwitch"
-          />
-          <label className="toggle-switch-labell" htmlFor="toggleSwitch">
-            <span className="toggle-switch-inner" />
-            <span className="toggle-switch-switchh" />
-          </label>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const Footer = () => {
-  const [shoe, setShoe] = useState([
-    {
-      id: "",
-      shoeName: "",
-      shoePrice: "",
-      shoePicture: "",
-    },
-  ]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("clicked", shoe);
-    // ... submit to API or something
-  };
-
-  //  const shoecard = (shoe) => {
-  //     const shoedata = { shoe };
-  //     <div>
-  //       <div className="card mt-4" key={shoedata.id}>
-  //         <div className="card-body">
-  //             <h5 className="card-title clr-title">{shoedata.title} </h5>
-  //           <h6 className="card-subtitle mb-2 text-muted">{shoedata.title} </h6>
-  //           <p className="card-text">{shoedata.body}</p>
-  //         </div>
-  //       </div>
-  //     </div>
-  //  };
-
-  return (
-    <div className="container addshoess">
-      <div className="styleflexx">
-        <button
-          className="btnn"
-          onClick={() => {
-            setShoe((currentShoe) => [
-              ...currentShoe,
-              {
-                id: generate(),
-                shoeName: "",
-                shoePrice: "",
-                shoePicture: "",
-              },
-            ]);
-          }}
-        >
-          add new shoe
-        </button>
-        {shoe.map((s, index) => {
-          return (
-            <div key={s.id}>
-              <input
-                onChange={(e) => {
-                  const shoeName = e.target.value;
-                  setShoe((currentShoe) =>
-                    produce(currentShoe, (v) => {
-                      v[index].shoeName = shoeName;
-                    })
-                  );
-                }}
-                value={s.shoeName}
-                placeholder="shoe name"
-              />
-              <input
-                onChange={(e) => {
-                  const shoePrice = e.target.value;
-                  setShoe((currentShoe) =>
-                    produce(currentShoe, (v) => {
-                      v[index].shoePrice = shoePrice;
-                    })
-                  );
-                }}
-                value={s.shoePrice}
-                placeholder="shoe price"
-              />
-              <input
-                onChange={(e) => {
-                  const shoePicture = e.target.value;
-                  setShoe((currentShoe) =>
-                    produce(currentShoe, (v) => {
-                      v[index].shoePicture = shoePicture;
-                    })
-                  );
-                }}
-                value={s.shoePicture}
-                placeholder="shoe picture"
-              />
-              <button
-                style={{ marginLeft: "10px" }}
-                onClick={() => {
-                  setShoe((currentShoe) =>
-                    currentShoe.filter((x) => x.id !== s.id)
-                  );
-                }}
-              >
-                x
-              </button>
-              <br />
-            </div>
-          );
-        })}
-        <div>
-          <button
-            type="button"
-            className="btn btnn btn-success"
-            onClick={handleSubmit}
-          >
-            Submit
-          </button>
-        </div>
-
-        {/* <div>{shoe ? shoecard : null}</div> */}
-        {/* <div>{JSON.stringify(shoe)}</div> <br /> */}
-        {/* <br /> */}
-      </div>
-    </div>
-  );
-};
 
 class MainContent extends React.Component {
   constructor() {
@@ -311,8 +154,8 @@ class MainContent extends React.Component {
     return (
       <div style={{background:"white"}}>
         <div className=" container Normal-background">
-          <Header />
-          <Footer />
+          <Header/>
+          <AddNewShoes />
           <div>{this.state.shoes}</div>
           <div
             className="totalStylee"
