@@ -115,7 +115,7 @@ const AddNewShoes = () => {
         </div>
 
         {/* <div>{shoe ? shoecard : null}</div> */}
-        {/* <div>{JSON.stringify(shoe)}</div> <br /> */}
+        <div>{JSON.stringify(shoe)}</div> <br />
         {/* <br /> */}
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function Navbar() {
           <Link
             to="/"
             className="nav-link"
-            style={{ color: "rgba(255, 255, 255, 0.5)" }}
+            style={{ color: "orange", fontWeight: "bold" }}
           >
             Muvesuna
           </Link>
@@ -29,12 +29,20 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <Link to="/About" className="nav-link">
+              <Link
+                to="/About"
+                className="nav-link"
+                style={{ color: "white" }}
+              >
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Dark_Mode" className="nav-link">
+              <Link
+                to="/Dark_Mode"
+                className="nav-link"
+                style={{ color: "white" }}
+              >
                 Dark Mode
               </Link>
             </li>

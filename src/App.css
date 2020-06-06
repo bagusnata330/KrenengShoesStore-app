@@ -106,6 +106,12 @@ background: linear-gradient(to bottom, #000000 0%, #010122 84%, #090232 100%);
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.btn-outline-success {
+    color: orange !important;
+    border-color: orange !important;
+}
+
+/* ===================================================================================================================================== */
 
 /* ==> Dark Mode CSS <== */
 .flaming {
