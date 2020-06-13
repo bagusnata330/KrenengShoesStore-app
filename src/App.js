@@ -5,24 +5,33 @@ import Navbar from "./component/Navbar";
 import MainContent from "./MarketComponent/MainContent";
 import DarkMode from "./Dark-Mode/DarkMode";
 import About from "./component/About";
+import AddShoe from "./MarketComponent/AddShoe"
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <div className="row">
-          <Navbar /> 
-        </div>
-        <div style={{ marginTop: "3rem" }}>
-          <Switch>
-            <Route exact path="/" component={MainContent} />
-            <Route exact path="/About" component={About} />
-            <Route exact path="/Dark_Mode" component={DarkMode} />
-          </Switch>
-        </div>
-      </div>
-    </Router>
-  );
+
+function App(){
+  return(
+    <div>
+      <AddShoe/>
+    </div>
+  )
 }
+// function App() {
+//   return (
+//     <Router>
+//       <div>
+//         <div className="row">
+//           <Navbar /> 
+//         </div>
+//         <div style={{ marginTop: "3rem" }}>
+//           <Switch>
+//             <Route exact path="/" component={MainContent} />
+//             <Route exact path="/About" component={About} />
+//             <Route exact path="/Dark_Mode" component={DarkMode} />
+//           </Switch>
+//         </div>
+//       </div>
+//     </Router>
+//   );
+// }
 
 export default App;
