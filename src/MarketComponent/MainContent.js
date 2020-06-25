@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { produce } from "immer";
 import { generate } from "shortid";
 import Header from "./Header"
-import AddNewShoes from "./AddNewShoes"
+import ShoeFrom from "./AddShoe"
+// import AddNewShoes from "./AddNewShoes"
 
 
 class MainContent extends React.Component {
@@ -12,8 +13,11 @@ class MainContent extends React.Component {
       shoes: [],
       cart: [],
       total: 0,
+      name: "",
+      price: null,
+      picture: "",
     };
-    this.addToCart = this.addToCart.bind(this);
+     this.addToCart = this.addToCart.bind(this);
   }
 
   componentDidMount() {
@@ -100,13 +104,6 @@ class MainContent extends React.Component {
         picture:
           "https://stockx.imgix.net/Adidas-Yeezy-Wave-Runner-700-Solid-Grey-Product.jpg",
       },
-      {
-        id: 13,
-        name: "Jordan 13 Retro White Soar Green Pink (GS)",
-        price: 200,
-        picture:
-          "https://stockx.imgix.net/Air-Jordan-13-Retro-White-Soar-Green-Pink-GS.png",
-      },
     ];
 
     const shoeCards = shoeData.map((shoe) => (
@@ -116,6 +113,7 @@ class MainContent extends React.Component {
     this.setState({ shoes: shoeCards });
   }
 
+  // ADD TO CART COMPONENT
   addToCart(shoe) {
     console.log("item added to card is ", shoe);
 
@@ -138,25 +136,34 @@ class MainContent extends React.Component {
     return cartCard;
   }
 
+  // TOTAL PRICE COMPONENT
   getTotalPrice() {
     const cartData = this.state.cart;
     let total = 0;
-    // for(let i = 0; i < cartData.length; i++) {
-    //   total = total + cartData[i].price;
-    // }
     cartData.forEach((shoe) => {
       total = total + shoe.price;
     });
     return total;
   }
 
+
+
   render() {
     return (
-      <div style={{background:"white"}}>
+      <div style={{ background: "white" }}>
+        {/* HEADER */}
         <div className=" container Normal-background">
-          <Header/>
-          <AddNewShoes />
-          <div>{this.state.shoes}</div>
+          <Header />
+
+          {/* SHOE FORM */}
+          <ShoeFrom />
+
+          {/* SHOE LIST */}
+          <div>
+            {/* {this.state.shoes} */}
+          </div>
+
+          {/* GET TOTAL PRICE */}
           <div
             className="totalStylee"
             style={{
@@ -198,4 +205,11 @@ function ShoeCard(props) {
   );
 }
 
+
+
 export default MainContent;
+
+// total price :
+ // for(let i = 0; i < cartData.length; i++) {
+    //   total = total + cartData[i].price;
+    // }
